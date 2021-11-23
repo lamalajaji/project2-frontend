@@ -1,46 +1,42 @@
 import React from "react";
 import axios from "axios";
 import { useState } from "react";
-import { Navigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 
 const BASE_URL = "http://localhost:5000";
 
 const SignUp = () => {
-    const [user, setUser] = useState(null);
-  const [users, setUsers] = useState([]);
+//   const [users, setUsers] = useState([]);
   const [userName, setUsersName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  //  const [signupMessage, setSignupMessage] = useState("");
-
-  //// local storage to 
-//    useEffect(() => {
-//      const userStorage = localStorage.getItem("user");
-//      setUser(JSON.parse(userStorage));
-//    }, []);
+  
 
 
-  const getUsers = async () => {
-    try {
-      const res = axios.get(`${BASE_URL}/users/allusers`);
-      setUsers((await res).data);
-    } catch (error) {
-      console.log("getUsers error: ", error);
-    }
-  };
+//   const getUsers = async () => {
+//     try {
+//       const res = axios.get(`${BASE_URL}/users/allusers`);
+//       setUsers(res.data);
+//     } catch (error) {
+//       console.log("getUsers error: ", error);
+//     }
+//   };
 
   const newUser = async (e) => {
     try {
       e.preventDefault();
       const res = await axios.post(`${BASE_URL}/users/register`, {
         userName: userName,
-        email: email,
+        userEmail: email,
         password: password,
       });
-      getUsers();
+      if (res.data.message === "Sign Up Successfully") {
+       navigate("/");
+      } 
+    }
     
-    } catch (error) {
+    catch (error) {
       console.log("newUser error: ", error);
     }
   };
