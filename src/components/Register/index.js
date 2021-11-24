@@ -6,37 +6,35 @@ import { useNavigate } from "react-router-dom";
 const BASE_URL = "http://localhost:5000";
 
 const SignUp = () => {
-//   const [users, setUsers] = useState([]);
+  //   const [users, setUsers] = useState([]);
   const [userName, setUsersName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  
 
-
-//   const getUsers = async () => {
-//     try {
-//       const res = axios.get(`${BASE_URL}/users/allusers`);
-//       setUsers(res.data);
-//     } catch (error) {
-//       console.log("getUsers error: ", error);
-//     }
-//   };
+  //   const getUsers = async () => {
+  //     try {
+  //       const res = axios.get(`${BASE_URL}/users/allusers`);
+  //       setUsers(res.data);
+  //     } catch (error) {
+  //       console.log("getUsers error: ", error);
+  //     }
+  //   };
 
   const newUser = async (e) => {
+    e.preventDefault();
+
     try {
-      e.preventDefault();
       const res = await axios.post(`${BASE_URL}/users/register`, {
         userName: userName,
         userEmail: email,
         password: password,
       });
-      if (res.data.message === "Sign Up Successfully") {
-       navigate("/");
-      } 
-    }
-    
-    catch (error) {
+
+      if (res.data.massage === "Sign Up Successfully") {
+        navigate("/");
+      }
+    } catch (error) {
       console.log("newUser error: ", error);
     }
   };

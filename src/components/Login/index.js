@@ -19,12 +19,12 @@ const Login = () => {
 
   useEffect(() => {
     getAllUsers();
-  });
+  }, []);
 
   const logIn = (e) => {
     e.preventDefault();
     let check = false;
-    users.find((user) => {
+    users.forEach((user) => {
       if (user.userEmail === email && user.password === password) {
         navigate("/");
         check = true;

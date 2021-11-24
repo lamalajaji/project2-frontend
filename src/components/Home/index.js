@@ -32,7 +32,7 @@ const Home = () => {
           style and budget.
         </p>
       </div>
-      
+
       <div className="contact">
         <h1>Stay Connected</h1>
         <h2>Drop us a message if you have any enquiries.</h2>
