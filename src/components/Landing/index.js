@@ -1,13 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import NavBar from "./../NavBar";
-const Home = () => {
+
+const Landing = () => {
   return (
     <div>
-      <NavBar/>
+      <nav>
+        <ul>
+          <Link to="/home">
+            <li>Home</li>
+          </Link>
+          <Link to="/login">
+            <li>login</li>
+          </Link>
+        </ul>
+      </nav>
       <div className="registration">
-       
-        
+        <button>
+          <Link to="/register">Sign Up</Link>
+        </button>
       </div>
 
       <div className="About">
@@ -33,4 +43,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Landing;
