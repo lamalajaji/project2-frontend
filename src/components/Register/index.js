@@ -37,7 +37,7 @@ useEffect(() => {
       });
 
       if (res.data.massage === "Sign Up Successfully") {
-        navigate("/");
+        navigate("/home");
       }
     } catch (error) {
       console.log("newUser error: ", error);

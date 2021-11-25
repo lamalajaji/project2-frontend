@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import "./style.css";
 
 const NavBar = () => {
   return (
-    <ul>
+    <ul className="navBar">
       <Link to="/">
         <li>Home</li>
       </Link>
