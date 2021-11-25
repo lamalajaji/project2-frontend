@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation , useNavigate } from "react-router-dom";
 import NavBar from "../NavBar";
 
 const BASE_URL = "http://localhost:5000";
@@ -9,6 +9,8 @@ const BASE_URL = "http://localhost:5000";
 const Blog = () => {
   const [posts, setPosts] = useState([]);
     const [comments, setComments] = useState([]);
+      const navigate = useNavigate();
+
 
   let { pathname } = useLocation();
 
@@ -40,16 +42,7 @@ const Blog = () => {
   }
 
 
-  /////// Add comments function 
-  const addComment = async (e) => {
-    try {
-      e.preventDefault();
-      const comment = await axios.post(`${BASE_URL}/posts/addcomment`);
-      setComments(...comments, comment);
-    } catch (error) {
-      console.log("addComment Error:", error);
-    }
-  };
+  
 
   return (
     <div>
@@ -69,7 +62,7 @@ const Blog = () => {
               <img key={i} src={post.media.map((elem) => elem.img1)} />
               <img key={i} src={post.media.map((elem) => elem.img2)} />
               <img key={i} src={post.media.map((elem) => elem.img3)} />
-              <input type="submit" value="Show Comments" onSubmit={handleShowClick}/>
+              <input type="submit" value="See More" onClick= {()=> navigate("/post")} />
             </div>
             <div className="project">{/* <img src={post} /> */}</div>
           </>

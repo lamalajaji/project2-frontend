@@ -4,6 +4,8 @@ import SignUp from "./components/Register";
 import Login from "./components/Login";
 import Explore from "./components/Explore";
 import Blog from "./components/Blog";
+import Post from "./components/Post";
+
 import Home from "./components/Home";
 
 
@@ -19,6 +21,7 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route exact path="/explore" element={<Explore />} />
         <Route exact path="/blog" element={<Blog />} />
+        <Route exact path="/post" element={<Post />} />
       </Routes>
     </div>
   );
