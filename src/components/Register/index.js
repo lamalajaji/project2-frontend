@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const BASE_URL = "http://localhost:5000";
@@ -10,6 +10,7 @@ const SignUp = () => {
   const [userName, setUsersName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+   const [user, setUser] = useState(null);
   const navigate = useNavigate();
 
   //   const getUsers = async () => {
@@ -20,6 +21,10 @@ const SignUp = () => {
   //       console.log("getUsers error: ", error);
   //     }
   //   };
+useEffect(() => {
+  const userData = localStorage.getItem("user");
+  setUser(JSON.parse(userData));
+}, []);
 
   const newUser = async (e) => {
     e.preventDefault();

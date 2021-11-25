@@ -18,10 +18,7 @@ const Home = () => {
         <button>
           <Link to="/register">Sign Up</Link>
         </button>
-        Are you Designer?
-        <button>
-          <Link to="/newdesigner">Sign Up as a Designer</Link>
-        </button>
+        
       </div>
 
       <div className="About">
