@@ -1,11 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./style.css";
 
 const Landing = () => {
   return (
     <div>
       <nav>
         <ul>
+          <img
+            src="https://www.decorist.com/static/finds/product_images/drpl/decorist%20logo.png"
+            alt="logo"
+          />
           <Link to="/home">
             <li>Home</li>
           </Link>
