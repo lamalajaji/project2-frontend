@@ -11,8 +11,8 @@ const NavBar = () => {
           alt="logo"
         />
         <ul className="navBar">
-          <Link to="/">
-            <li className="hame">Home</li>
+          <Link to="/home">
+            <li >Home</li>
           </Link>
           <Link to="/explore">
             <li>Explore</li>

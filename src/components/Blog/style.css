@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.wrapper {
+  width: 100%;
+  background-color: #ebebeb;
+}
+/* .block{
+    margin-top: 35vh;
+} */
+.inner {
+  margin: 10vh auto;
+  width: 75%;
+  border: 3px solid #FFFF;
+  border-radius: 3px;
+  padding: 10px;
+  background-color: #ffff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.designer {
+  margin: 30px;
+  height: 100px;
+  background-color: #E6E2DB;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+}
+.writter {
+  padding: 50px;
+  font-size: 30px;
+  color: black;
+  font-family: "Roboto Mono", monospace;
+}
+.designerPic {
+  width: 150px;
+  border-radius: 100px;
+}
+.title {
+  font-size: 45px;
+  font-family: 'Neucha', cursive;
+color: #2F200E;
+  margin: 30px;
+}
+.container{
+ text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.postPic {
+  max-width: 927px;
+  margin-left: 30px;
+}
+.postPart{
+    margin: 50px;
+font-family: 'Mali', cursive;
+font-size: 20px;
+}

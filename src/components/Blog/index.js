@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import NavBar from "../NavBar";
 import Post from "./../Post";
+import "./style.css";
+
 
 const BASE_URL = "http://localhost:5000";
 
@@ -34,29 +36,68 @@ const Blog = () => {
   };
 
   return (
-    <div>
-      <NavBar />
+    <div className="wrapper">
+      {/* <NavBar /> */}
       {posts.map((post, i) => {
         return (
           <>
-            <div className="designer" key={post._id}>
-              {/* <h1 key={post._id}>{post.createdBy.userEmail}</h1> */}
-              <h1>{post.title}</h1>
-              <span>
-                <h3>{post.createdBy.userName}</h3>{" "}
-              </span>{" "}
-              <img src={post.createdBy.profilePic} />
-              <p>{post.artical} </p>
-              <img key={i} src={post.media.map((elem) => elem.img1)} />
-              <img key={i} src={post.media.map((elem) => elem.img2)} />
-              <img key={i} src={post.media.map((elem) => elem.img3)} />
-              <input
+          
+            <div className="inner">
+              <div className="post">
+                <div className="designer" key={post._id}>
+                  {/* <h1 key={post._id}>{post.createdBy.userEmail}</h1> */}
+                  <span>
+                    <img
+                      className="designerPic"
+                      src={post.createdBy.profilePic}
+                    />
+                    <h3 className="writter"> {post.createdBy.userName}</h3>{" "}
+                  </span>
+                  {/* <p>{post.artical} </p> */}
+                </div>
+                <div className="container">
+                  <h1 className="title">{post.title}</h1>
+                  <div className="img">
+                    <img
+                      className="postPic"
+                      key={i}
+                      src={post.media.map((elem) => elem.img1)}
+                    />
+                  </div>
+                  <p className="postPart">
+                    {" "}
+                    {post.post.map((part) => part.part1)}
+                  </p>
+                  <div className="img">
+                    <img
+                      className="postPic"
+                      key={i}
+                      src={post.media.map((elem) => elem.img2)}
+                    />
+                  </div>
+                  <p className="postPart">
+                    {" "}
+                    {post.post.map((part) => part.part2)}
+                  </p>
+                  <div className="img">
+                    <img
+                      className="postPic"
+                      key={i}
+                      src={post.media.map((elem) => elem.img3)}
+                    />
+                  </div>
+                  <p className="postPart">
+                    {" "}
+                    {post.post.map((part) => part.part3)}
+                  </p>
+                </div>
+              </div>
+            </div>
+            {/* <input
                 type="submit"
                 value="See More"
                 onClick={() => handleClick(post._id)}
-              />
-            </div>
-            <div className="project">{/* <img src={post} /> */}</div>
+              /> */}
           </>
         );
       })}
