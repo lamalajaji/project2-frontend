@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import "./style.css";
 
 const BASE_URL = "http://localhost:5000";
 
@@ -46,6 +47,7 @@ const Login = () => {
   return (
     <div>
       <form onSubmit={(e) => logIn(e)}>
+        <h2> Welocme Back </h2>
         <input
           type="email"
           placeholder="Email"
@@ -53,7 +55,7 @@ const Login = () => {
         />
         <input
           type="password"
-          placeholder="password"
+          placeholder="Password"
           onChange={(e) => setPassword(e.target.value)}
         />
         <input type="submit" value="Login" />

@@ -24,6 +24,8 @@
   position: fixed;
   overflow: hidden;
   list-style-type: none;
+   border-bottom: 1px solid #E0E0E0;
+  font-size: 20px;
 
  
 }
@@ -37,9 +39,7 @@
     color: #C9A848 ;
 }
 
-.home{
-    text-decoration: underline;
-}
+
 
 
 

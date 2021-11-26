@@ -6,7 +6,7 @@ import Login from "./components/Login";
 import Explore from "./components/Explore";
 import Blog from "./components/Blog";
 import Post from "./components/Post";
-
+import DemoCarousel from "./components/banner"
 import Home from "./components/Home";
 
 
@@ -16,6 +16,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route exact path="/" element={<Landing />} />
+        <Route exact path="/" element={<DemoCarousel />} />
 
         <Route exact path="/register" element={<SignUp />} />
 
