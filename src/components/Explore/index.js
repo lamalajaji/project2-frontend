@@ -3,6 +3,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import {  useLocation } from "react-router-dom";
 import NavBar from "../NavBar";
+import "./style.css";
 
 const BASE_URL = "http://localhost:5000";
 
@@ -30,18 +31,24 @@ const Explore = () => {
 
   return (
     <div>
-      <NavBar />
+      {/* <NavBar /> */}
       {projects.map((project) => {
-        console.log(project);
+        // console.log(project);
         return (
           <>
-            <div className="designer">
-              {/* <h1 key={project._id}>{project.createdBy.userName}</h1> */}
-              <h1 key={project._id}>{project.createdBy.userEmail}</h1>
+            <div className="designerInfo">
+              <h2 className="desName" key={project._id}>{project.createdBy.userName}</h2>
+              <h2 key={project._id}>{project.createdBy.userEmail}</h2>
+              <h2 key={project._id}>{project.createdBy.phoneNumber}</h2>
+
               <img src={project.createdBy.profilePic} />
             </div>
             <div className="project">
-              <img src={project.media} />
+              <img src={project.media.map((img) => img.img1)} />
+              <img src={project.media.map((img) => img.img2)} />
+              <img src={project.media.map((img) => img.img3)} />
+              <img src={project.media.map((img) => img.img4)} />
+              <img src={project.media.map((img) => img.img5)} />
             </div>
           </>
         );
