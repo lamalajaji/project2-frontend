@@ -3,7 +3,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import NavBar from "../NavBar";
-import Post from "./../Post";
+// import Post from "./../Post";
 import "./style.css";
 
 
@@ -31,9 +31,10 @@ const Blog = () => {
     }
   }, []);
 
-  const handleClick = (_id) => {
-    navigate(`/post/${_id}`);
-  };
+  
+  // const handleClick = (_id) => {
+  //   navigate(`/post/${_id}`);
+  // };
 
   return (
     <div className="wrapper">

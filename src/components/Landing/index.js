@@ -24,7 +24,7 @@ const Landing = () => {
       <div className="banner">
         <img src="https://i.pinimg.com/originals/e3/34/56/e334569a847af62777d93b4bf408dfa2.jpg" />
       </div>
-      <div className="inner">
+      <div className="innner">
         <div className="About">
           <h2> We're Here To Help </h2>
           <div className="innerPic">
@@ -40,10 +40,10 @@ const Landing = () => {
             your style and budget.
           </p>
           <div className="registration">
-        <button className="signUp">
-          <Link to="/register">Sign Up</Link>
-        </button>
-      </div>
+            <button className="signUp">
+              <Link to="/register">Sign Up</Link>
+            </button>
+          </div>
         </div>
       </div>
 
