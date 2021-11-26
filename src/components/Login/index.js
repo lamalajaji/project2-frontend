@@ -47,7 +47,7 @@ const Login = () => {
   return (
     <div className="login">
       <div className="loginBox">
-        <form onSubmit={(e) => logIn(e)}>
+        <form className="loginForm" onSubmit={(e) => logIn(e)}>
           <h2 > Welocme Back </h2>
           <div className="inputWrap">
             <span>Email</span>
