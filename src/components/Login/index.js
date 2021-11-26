@@ -45,21 +45,27 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={(e) => logIn(e)}>
-        <h2> Welocme Back </h2>
-        <input
-          type="email"
-          placeholder="Email"
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <input type="submit" value="Login" />
-      </form>
+    <div className="login">
+      <div className="loginBox">
+        <form onSubmit={(e) => logIn(e)}>
+          <h2 > Welocme Back </h2>
+          <div className="inputWrap">
+            <span>Email</span>
+            <input
+              className="inputs"
+              type="email"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <span>Password</span>
+            <input
+              className="inputs"
+              type="password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <input className="button" type="submit" value="Login" />
+          </div>
+        </form>
+      </div>
     </div>
   );
 };
