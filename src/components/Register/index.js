@@ -2,6 +2,8 @@ import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import "./style.css";
+
 
 const BASE_URL = "http://localhost:5000";
 
@@ -45,25 +47,33 @@ useEffect(() => {
   };
 
   return (
-    <div>
-      <form onSubmit={(e) => newUser(e)}>
-        <input
-          type="text"
-          placeholder="Your name"
-          onChange={(e) => setUsersName(e.target.value)}
-        />
-        <input
-          type="email"
-          placeholder="Email"
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="password"
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <input type="submit" value="Submit" />
-      </form>
+    <div className="register">
+      <div className="registerBox">
+        <form className="registerForm" onSubmit={(e) => newUser(e)}>
+          <h2> Welocme In Decorist </h2>
+          <div className="regWrap">
+            <span>User Name</span>
+            <input
+              className="regInp"
+              type="text"
+              onChange={(e) => setUsersName(e.target.value)}
+            />
+            <span>Email</span>
+            <input
+              className="regInp"
+              type="email"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <span>Password</span>
+            <input
+              className="regInp"
+              type="password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <input className="regBtn" type="submit" value="Sign Up" />
+          </div>
+        </form>
+      </div>
     </div>
   );
 };
