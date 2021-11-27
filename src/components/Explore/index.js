@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import {  useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import NavBar from "../NavBar";
 import "./style.css";
 
@@ -21,8 +21,6 @@ const Explore = () => {
     }
   };
 
-  
-
   useEffect(() => {
     if (pathname === "/explore") {
       getAllProjects();
@@ -30,29 +28,39 @@ const Explore = () => {
   }, []);
 
   return (
-    <div>
-      {/* <NavBar /> */}
-      {projects.map((project) => {
-        // console.log(project);
-        return (
-          <>
-            <div className="designerInfo">
-              <h2 className="desName" key={project._id}>{project.createdBy.userName}</h2>
-              <h2 key={project._id}>{project.createdBy.userEmail}</h2>
-              <h2 key={project._id}>{project.createdBy.phoneNumber}</h2>
+    <div className="wrapper">
+      <NavBar />
+      <div className="explore">
+        {/* <div className="content"> </div> */}
+        {projects.map((project) => {
+          // console.log(project);
 
-              <img src={project.createdBy.profilePic} />
-            </div>
-            <div className="project">
-              <img src={project.media.map((img) => img.img1)} />
-              <img src={project.media.map((img) => img.img2)} />
-              <img src={project.media.map((img) => img.img3)} />
-              <img src={project.media.map((img) => img.img4)} />
-              <img src={project.media.map((img) => img.img5)} />
-            </div>
-          </>
-        );
-      })}
+          return (
+            <>
+              <div className="designerInfo">
+                <img src={project.createdBy.profilePic} />
+                <h2 className="desEmail" key={project._id}>
+                  {project.createdBy.userEmail}
+                </h2>
+                <h2 className="desName" key={project._id}>
+                  {project.createdBy.userName}
+                </h2>
+
+                <h2 className="phone" key={project._id}>
+                  {project.createdBy.phoneNumber}
+                </h2>
+              </div>
+              <div className="project">
+                <img src={project.media.map((img) => img.img1)} />
+                <img src={project.media.map((img) => img.img2)} />
+                <img src={project.media.map((img) => img.img3)} />
+                <img src={project.media.map((img) => img.img4)} />
+                <img src={project.media.map((img) => img.img5)} />
+              </div>
+            </>
+          );
+        })}
+      </div>
     </div>
   );
 };

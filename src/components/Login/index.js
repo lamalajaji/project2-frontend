@@ -27,8 +27,14 @@ const Login = () => {
     let check = false;
     users.forEach((user) => {
       if (user.userEmail === email && user.password === password) {
-        navigate("/");
+        navigate("/home");
         check = true;
+      } else {
+        Swal.fire({
+          icon: "Eroor",
+          title: "Can't Login",
+          text: "Invalid Email or Password",
+        });
       }
     });
     if (check) {
@@ -36,12 +42,12 @@ const Login = () => {
         localStorage.setItem("user", JSON.stringify({ email }));
       } catch (error) {
         console.log("logIn error: ", error);
-      }
-    } else {
-      let popUp = Window.open("", "", "width=300 , height= 150");
-      popUp.document.write(`<h2> Incorrect Email or Password </h2>`);
-      popUp.focus();
-    }
+      }}
+    // } else {
+    //   let popUp = Window.open("", "", "width=300 , height= 150");
+    //   popUp.document.write(`<h2> Incorrect Email or Password </h2>`);
+    //   popUp.focus();
+    // }
   };
 
   return (
