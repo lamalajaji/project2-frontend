@@ -1,16 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import NavBar from "./../NavBar";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import DemoCarousel from "../banner";
 import "./style.css";
 
 const Home = () => {
   return (
     <div>
+      <DemoCarousel />
       <NavBar />
 
-      <div className="banner">
+      {/* <div className="banner">
         <img src="https://i.pinimg.com/originals/e3/34/56/e334569a847af62777d93b4bf408dfa2.jpg" />
-      </div>
+      </div> */}
 
       <div className="innner">
         <div className="About">

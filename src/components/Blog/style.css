@@ -11,20 +11,21 @@
     margin-top: 35vh;
 } */
 .inner {
-  margin: 10vh auto;
+  margin: 35vh auto;
   width: 75%;
-  border: 3px solid #FFFF;
+  border: 3px solid #ffff;
   border-radius: 3px;
   padding: 10px;
   background-color: #ffff;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 .designer {
   margin: 30px;
   height: 100px;
-  background-color: #E6E2DB;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-
+  background-color: #e6e2db;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 .writter {
   padding: 50px;
@@ -34,16 +35,16 @@
 }
 .designerPic {
   width: 150px;
-  border-radius: 100px;
+  border-radius: 180px;
 }
 .title {
-  font-size: 45px;
-  font-family: 'Neucha', cursive;
-color: #2F200E;
+  font-size: 40px;
+  font-family: "Sawarabi Mincho", sans-serif;
+  color: #2f200e;
   margin: 30px;
 }
-.container{
- text-align: center;
+.container {
+  text-align: center;
   display: inline-block;
   vertical-align: middle;
 }
@@ -52,8 +53,8 @@ color: #2F200E;
   max-width: 927px;
   margin-left: 30px;
 }
-.postPart{
-    margin: 50px;
-font-family: 'Mali', cursive;
-font-size: 20px;
+.postPart {
+  margin: 50px;
+  font-family: "Mali", cursive;
+  font-size: 20px;
 }
