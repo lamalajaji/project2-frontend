@@ -4,7 +4,11 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #ebebeb;
+  /* background-color: #ebebeb; */
+  background-image: url("http://cdn.home-designing.com/wp-content/uploads/2021/09/unique-coffee-table.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
 }
 .register {
   font-size: 20px;
