@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; 
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import DemoCarousel from "../banner";
 import "./style.css";
 
 const Landing = () => {
   return (
     <div>
+      <DemoCarousel />
       <div className="header">
         <img
           src="https://www.decorist.com/static/finds/product_images/drpl/decorist%20logo.png"
@@ -21,9 +22,9 @@ const Landing = () => {
           </Link>
         </ul>
       </div>
-      <div className="banner">
+      {/* <div className="banner">
         <img src="https://i.pinimg.com/originals/e3/34/56/e334569a847af62777d93b4bf408dfa2.jpg" />
-      </div>
+      </div> */}
       <div className="innner">
         <div className="About">
           <h2> We're Here To Help </h2>
@@ -68,6 +69,5 @@ const Landing = () => {
     </div>
   );
 };
-
 
 export default Landing;
