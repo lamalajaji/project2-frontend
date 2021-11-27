@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@mui/icons-material": "^5.2.0",
+    "@mui/material": "^5.2.1",
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
@@ -11,10 +13,12 @@
     "nodemon": "^2.0.15",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1",
     "react-responsive-carousel": "^3.2.22",
     "react-router-dom": "^6.0.2",
     "react-scripts": "4.0.3",
     "router-dom": "^2.2.6",
+    "sass": "^1.43.5",
     "sweetalert2": "^11.2.1",
     "web-vitals": "^1.1.2"
   },

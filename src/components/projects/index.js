@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; 
+// import ReactDOM from "react-dom";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
 class DemoCarousel extends Component {
@@ -13,7 +13,7 @@ class DemoCarousel extends Component {
         showThumbs={false}
         interval={1700}
         infiniteLoop={true}
-        // width = {"50%"}
+        width = {"40%"}
       >
         <div>
           <img src="https://www.yasminid.com/wp-content/uploads/2021/06/AA5I6040.jpg" />

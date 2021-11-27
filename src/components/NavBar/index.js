@@ -20,9 +20,9 @@ const NavBar = () => {
           <Link to="/blog">
             <li>Blog</li>
           </Link>
-          <Link to="/profile">
+          {/* <Link to="/profile">
             <li>Profile</li>
-          </Link>
+          </Link> */}
         </ul>
       </div>
    

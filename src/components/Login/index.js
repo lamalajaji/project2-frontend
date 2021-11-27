@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 import "./style.css";
 
 const BASE_URL = "http://localhost:5000";
@@ -29,20 +30,21 @@ const Login = () => {
       if (user.userEmail === email && user.password === password) {
         navigate("/home");
         check = true;
-      } else {
-        Swal.fire({
-          icon: "Eroor",
-          title: "Can't Login",
-          text: "Invalid Email or Password",
-        });
-      }
+      } 
     });
     if (check) {
       try {
         localStorage.setItem("user", JSON.stringify({ email }));
       } catch (error) {
         console.log("logIn error: ", error);
-      }}
+      }
+    } else {
+      Swal.fire({
+        icon: "Eroor",
+        title: "Can't Login",
+        text: "Invalid Email or Password",
+      });
+    }
     // } else {
     //   let popUp = Window.open("", "", "width=300 , height= 150");
     //   popUp.document.write(`<h2> Incorrect Email or Password </h2>`);

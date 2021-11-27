@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.explore{
+    width: 90%;
+    margin: 30vh 40px;
+
+}
+
+.designerInfo{
+      width: 400px;
+    height: 180px;
+    margin: 50px 30px 80px 40px;
+    // margin-bottom: 30px;
+    border: none;
+    border-radius: 5px;
+
+    background-color: #FFFF;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+}
+.designerInfo img { 
+    width: 100px;
+    height: 100px;
+    border-radius: 180px;
+    margin : 15px 0 5px 15px  ;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.desName{
+    font-size: 25px;
+  font-family: 'Neucha', cursive;
+  margin : 35px 0 0 15px  ;
+    color: #333232;
+  
+}
+.desEmail {
+     font-size: 17px;
+  font-family: 'Mali', cursive;
+  color: #5a5958;
+  margin-left: 130px ;
+  margin-top: -50px;
+}
+.phone{
+     font-size: 20px;
+  font-family: 'Mali', cursive;
+    color: #5a5958;
+
+  margin-left: 190px ;
+  margin-top: -40px;
+}
+
+.eIcon , .phIcon{
+    color: #c9a848;
+    font-size: 23px;
+}
+
+$max-img-width: 800px;
+$max-img-height: 600px;
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+.gallery {
+  display: flex;
+    margin: 10px auto;
+    max-width: $max-img-width;
+    position: relative;
+    padding-top: $max-img-height/$max-img-width * 100%;
+    
+    @media screen and (min-width: $max-img-width){
+      padding-top: $max-img-height;
+    }
+  
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+   &__thumb {
+    padding-top: 6px;
+    margin: 6px;
+    display: block;
+  }
+  
+  &__selector {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    
+    &:checked {
+      + .gallery__img {
+        opacity: 1;
+      }
+      ~ .gallery__thumb > img {
+        box-shadow: 0 0 0 3px  #c9a848;
+      }
+    }
+  }
+  
+ 
+}
+
+
+
+
+
+
+
+// .projects{
+//      display: flex;
+//   width: 60%;
+//   padding: 4% 2%;
+//   box-sizing: border-box;
+//   height: 100vh;
+// }
+// .Box{
+//      flex: 1;
+//   overflow: hidden;
+//   transition: .5s;
+//   margin: 0 2%;
+//   box-shadow: 0 20px 30px rgba(0,0,0,.1);
+//   line-height: 0;
+// }
+// .Box >img {
+//     width: 200%;
+//   height: calc(100% - 10vh);
+//   object-fit: cover; 
+//   transition: .5s;
+// }
+// .box:hover { flex: 1 1 50%; }
+// .box:hover > img {
+//   width: 100%;
+//   height: 100%;
+// }
+ 
+// .project img {
+//     width: 450px;
+//     height: 250px;
+// }
+// .project img:hover {
+//     position:relative;
+//     top:-25px;
+//     left:-35px;
+//     width:900px;
+//     height:auto;
+//     display:block;
+//     z-index:999;
+// }
